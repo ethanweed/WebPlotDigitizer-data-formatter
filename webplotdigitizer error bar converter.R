@@ -30,9 +30,13 @@ se <- df$eb-df$m
 # multiply standard error by square root of n to get SD
 sd <- se*sqrt(n)
 
-# output results
+# output results...
 df <- data.frame(m,sd)
+
+#... as a csv file
 write.csv(file = "output.csv", x = df)
+
+#... to clipboard for pasting
 write_clip(df)
 
 
